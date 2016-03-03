@@ -17,7 +17,7 @@ class RestaurantsController < ApplicationController
     if @restaurant.save
       redirect_to restaurants_path
     else
-      render 'new'
+      render 'new' # Takes instance variable value and uses in new_restaurant_path route (same as 'new')
     end
   end
 

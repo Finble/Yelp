@@ -5,4 +5,8 @@ describe Review, :type => :model do
     review = Review.new(rating: 10)
     expect(review).to have(1).error_on(:rating)
   end
+
+describe Review do
+  it { should belong_to(:restaurant) }
+	end
 end

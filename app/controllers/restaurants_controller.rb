@@ -1,5 +1,7 @@
 class RestaurantsController < ApplicationController
 
+  before_action :authenticate_user!, :except => [:index, :show] # ensures you are signed in before being able to do any actions (except for index and show)
+
   def index
     @restaurants = Restaurant.all
   end
